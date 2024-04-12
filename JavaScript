@@ -66,13 +66,44 @@ const의 특징
 - 변수가 업데이트, 재선언 불가능 일정한 상수 값을 유지 // 상수란 수식에서 변하지 않는 값을 뜻한다.
 ex)
 const x = 1; // x는 1로 선언
-const x = 2' // 코드 에러가 뜬다. Identifier 'x' has already been declared 식별자가 이미 선언되어있다고 에러가 발생한다.
+const x = 2; // 코드 에러가 뜬다. Identifier 'x' has already been declared 식별자가 이미 선언되어있다고 에러가 발생한다.
 x = 2; // 코드 에러가 뜬다. Assignment to constant variable.  상수의 변수에 할당되었다고 에러가 발생한다.
 
 - const선언도 let선언처럼 선언된 블록 범위 내에서만 접근이 가능하다.
 
+- 다른 변수와 다르게 다소 특이한 점이 있는데 const개체는 업데이트는 할 수 없지만, 개체의 요소나 속성은 업데이트가 가능하다 단 예시와 같이 선언한 경우. // 속성이란 객체, 요소, 또는 파일의 성질이다. 속성은 또한 이들의 인스턴스(instance)에 주어진 특정 값을 지정하거나 나타내는 데에도 쓰인다.
+  const가 변수 자체를 불변으로 만드는 것이 아니라 변수가 참조하는 값의 변경을 막는 것이기 때문이다. 배열이나 객체는 참조 타입이고, const로 선언된 변수가 참조하는 메모리 공간 자체는 변경되지 않는다. 따라서 변수가 참조하는 배열이나 객체의 요소나 속성은 여전히 변경 가능하다.
+ex)
+const get = {
+    name : "Lee", // get.name Lee 선언
+    x : 1 // get.x 1 선언
+};
+console.log(get.name); // get.name값인 Lee 출력
+console.log(get.x); // get.x값인 1 출력
 
+get.x=2; // 속성값은 변경이 가능하므로 get.x는 2로 업데이트
+console.log(get.x); // get.x값이 업데이트된 2로 출력
 
+get = {
+  name2 : "Kim";
+  y : 2
+}; 코드 에러가 뜬다. Assignment to constant variable.  상수의 변수에 할당되었다고 에러가 발생한다.
+
+const arr = [1, 2];
+arr.push(3);
+console.log(arr); // [1, 2, 3]로 배열 출력
+
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+arr1 = arr2; // 코드 에러가 뜬다. Assignment to constant variable.  상수의 변수에 할당되었다고 에러가 발생한다.
+
+- const의 호이스팅은 let과 마찬가지로 const 선언도 맨 위로 올려지고, 초기화되지 않습니다.
+
+3개의 변수 선언법의 총정리
+1. var 선언은 전역 범위 또는 함수 범위이며, let과 const는 블록 범위이다.
+2. var 변수는 범위 내에서 업데이트 및 재선언이 가능하며 let 변수는 업데이트만 가능하고, 재선언 불가능하다. const 변수는 업데이트와 재선언 둘 다 불가능하다. 단 업데이트는 예외가 있다.
+3. 3가지 선언 방법 모두 최상위로 호이스팅 되지만, var 변수만 undefined(정의되지 않음)으로 초기화 되고 let 변수와 const 변수는 초기화되지 않는다.
+4. var 변수와 let 변수는 초기화하지 않은 상태에서 선언할 수 있지만, const는 선언 중에 초기화해야한다.
 
 
 
