@@ -135,5 +135,33 @@ let y = 3.141592; // y의 자료형은 Number 데이터값은 3.141592  Javascri
 let z = -10; // z의 자료형은 Number 데이터값은 -10
 ```
 
+#### 불리언(Boolean)
+- 함과 거짓 두가지만 있는 타입, 인용부호 사용x
+``` javascript
+ex)
+let T = true; // T의 자료형은 Boolean 데이터값은 true(참)
+let F = false; // F의 자료형은 Boolean 데이터값은 false(거짓)
+```
+
+#### 배열(Array)
+- 여러 값을 하나의 단일 참조로 저장하는 구조를 가진 타입
+``` javascript
+ex)
+let arr1 = [1, 2, 3]; // arr1의 자료형은 Array 데이터값은[1, 2, 3]
+console.log(arr1); // arr1의 배열 [1, 2, 3]이 출력
+console.log(arr1[0]); // arr1의 배열 1번째의 1을 출력, 원하는 배열의 위치의 인덱스값을 입력 단 첫번째가 0부터 시작함
+
+let arr2 = ["Lee", "Kim", " Park"]; // arr2의 자료형은 Array 데이터값은 ["Lee", "Kim", " Park"], 문자열도 배열에 사용 가능
+console.log(arr2); // arr2의 배열 ["Lee", "Kim", " Park"]이 출력
+console.log(arr2[1]); // arr2의 배열 2번째의 "Kim"을 출력
+
+let arr3 = [1, "Lee", 2, true]; // arr3의 자료형은 Array 데이터값은 [1, "Lee", 2], 숫자나 문자열 혹은 불리언 혼합 사용가능
+console.log(arr3); // arr3의 배열 [1, "Lee", 2, true]이 출력
+console.log(arr3[3]); // arr3의 배열 4번째의 true을 출력
+```
+
+#### 객체(Object)
+- 여러 속성을 하나의 변수에 저장할 수 있도록 해주는 데이터 타입으로 Key / Value Pair를 저장할 수 있는 구조이다.
+
 
 
