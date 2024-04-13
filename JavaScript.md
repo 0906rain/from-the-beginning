@@ -1,4 +1,4 @@
-JavaScript란 ?
+###JavaScript란 ?
 - HTML과 CSS로 구성된 웹 페이지를 동적으로 만들어주는 언어
 
 기본 문법
