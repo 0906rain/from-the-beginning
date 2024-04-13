@@ -8,6 +8,7 @@
 
 var의 특징
 - var의 Scope(범위)는 전역 혹은 함수 범위로 지정된다. 즉 함수 외부에서 var 선언하면 전역변수로 사용이 되고, 함수 내에서 선언하면 그 함수의 지역변수로 사용된다.
+``` javascript
 ex)
 var x = 1; // x는 전역변수로 값은 1이다.
 
@@ -16,7 +17,7 @@ function F() {
 }
 console.log(x); // x의 값인 1 출력
 console.log(y); // y를 찾을 수 없다고 에러가 발생한다. y is not defined
-
+```
 - 변수가 재선언과 업데이트가 가능
 ex)
 var x = 1; // x는 1로 선언
