@@ -19,11 +19,12 @@ console.log(x); // x의 값인 1 출력
 console.log(y); // y를 찾을 수 없다고 에러가 발생한다. y is not defined
 ```
 - 변수가 재선언과 업데이트가 가능
+``` javascript
 ex)
 var x = 1; // x는 1로 선언
 var x = 2; // x는 2로 재선언
 x = 3; // x는 3으로 업데이트
-
+```
 - 변수의 재선언과 업데이트가 가능하여 의도치 않게 재선언 혹은 업데이트가 된다.
 ex)
 var name = "Lee"; // name을 Lee로 선언
