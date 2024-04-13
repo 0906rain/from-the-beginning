@@ -162,6 +162,13 @@ console.log(arr3[3]); // arr3의 배열 4번째의 true을 출력
 
 #### 객체(Object)
 - 여러 속성을 하나의 변수에 저장할 수 있도록 해주는 데이터 타입으로 Key / Value Pair를 저장할 수 있는 구조이다.
+``` javascript
+ex)
+var user = {
+  name: "Lee", // name은 key, Lee는 value
+  age : 25  // age은 key, 25는 value
+};
+
 
 
 
