@@ -8,4 +8,25 @@
 - 실제로 코드가 끌어올려지는 건 아니며, 자바스크립트 구문분석(Parser) 내부적으로 끌어올려서 처리하는 것이다.
 - 실제 메모리에서는 변화가 없다.
 
-  ##### 실제로 호이스팅의 대상
+##### 호이스팅의 대상
+1. Var 변수 선언
+- Var 변수 선언만 끌어 올려지며, 할당은 끌어 올려지지 않는다.
+``` javascript
+ex)
+console.log("Test");
+var x = 1; // 변수 var
+let y = 2; // 변수 let
+const z = 3; // 변수 const
+
+// JS에서 구문분석(Parser) 내부의 호이스팅(Hoisting)의 결과 - 결과는 같음
+
+var x; // 호이스팅(Hoisting) 선언
+console.log("Test");
+x = 1; // x에 1 할당
+let y = 2; // 호이스팅(Hoisting) 발생x
+const z = 3; // 호이스팅(Hoisting) 발생x
+```
+
+2. 함수선언문
+- 함수선언문에서는 
+
